@@ -1,4 +1,4 @@
-import React from 'react'
+import { FaGithub } from 'react-icons/fa'
 
 import {
   Box,
@@ -50,7 +50,7 @@ const Hero = ({ title, subtitle, image, ctaLink, ctaText, disclaimer }) => (
       </Heading>
       <Link href={ctaLink} isExternal>
         <Button borderRadius="8px" py="4" px="4" lineHeight="1" size="md">
-          {ctaText}
+          {ctaText} <FaGithub style={{ marginLeft: '8px', marginTop: '2px' }} />
         </Button>
       </Link>
       <Text
