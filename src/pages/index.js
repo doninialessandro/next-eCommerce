@@ -29,9 +29,9 @@ const Index = () => {
       <Main>
         <Hero
           title="Space Shop"
-          subtitle="This is an eCommerce application to accept payments & sell products powered by Stripe and built with Next.js 🔒💸"
+          subtitle="This is an eCommerce application to accept payments & sell products powered by Stripe and built with Next.js and Chakra UI 🔒💸"
           image="/images/wp4923981.jpg"
-          ctaText="Do you want to knwo more? Take a look at soruce code!"
+          ctaText="Do you want to know more? Take a look at soruce code!"
           ctaLink="https://github.com/doninialessandro/next-eCommerce"
           disclaimer="Illustrative purposes only"
         />
