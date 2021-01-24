@@ -29,6 +29,7 @@ const Hero = ({ title, subtitle, image, ctaLink, ctaText, disclaimer }) => (
       <Heading
         as="h1"
         size="4xl"
+        pb={2}
         bgGradient="linear(to-l, #7928CA,#FF0080)"
         bgClip="text"
         fontWeight="black"
