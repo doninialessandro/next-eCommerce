@@ -50,7 +50,7 @@ const Hero = ({ title, subtitle, image, ctaLink, ctaText, disclaimer }) => (
       </Heading>
       <Link href={ctaLink} isExternal>
         <Button borderRadius="8px" py="4" px="4" lineHeight="1" size="md">
-          {ctaText} <FaGithub style={{ marginLeft: '8px', marginTop: '2px' }} />
+          {ctaText} <FaGithub style={{ marginLeft: '8px', marginTop: '1px' }} />
         </Button>
       </Link>
       <Text
