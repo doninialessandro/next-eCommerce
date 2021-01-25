@@ -76,9 +76,16 @@ workflows:
       #     requires:
       #       - build
 
-  release:
+  build-release:
     jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - develop
       - release:
+          requires:
+            - build
           filters:
             branches:
               only:

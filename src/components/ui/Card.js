@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { Box, Image, Badge, Button } from '@chakra-ui/react'
 import { PlusSquareIcon } from '@chakra-ui/icons'
 
@@ -20,7 +22,11 @@ const Card = props => {
       overflow="hidden"
       _hover={{ boxShadow: '2xl' }}
     >
-      <Image src={imageUrl} alt={imageAlt} />
+      <Link href={`/products/${id}`}>
+        <a>
+          <Image src={imageUrl} alt={imageAlt} />
+        </a>
+      </Link>
       <Box p="6">
         {isNew && (
           <Box d="flex" alignItems="baseline">

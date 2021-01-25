@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Link from 'next/link'
+
 import { Box, Flex, Button, IconButton, Stack } from '@chakra-ui/react'
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
 import { FiShoppingCart } from 'react-icons/fi'
@@ -34,7 +36,9 @@ const Header = props => {
       {...rest}
     >
       <Flex align="center">
-        <IconButton icon={<BiHomeSmile />} size="sm" rounded="md" />
+        <Link href="/">
+          <IconButton icon={<BiHomeSmile />} size="sm" rounded="md" />
+        </Link>
       </Flex>
 
       <Box display={{ base: 'block', md: 'none' }}>

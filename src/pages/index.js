@@ -37,7 +37,6 @@ const Index = () => {
               leftIcon={<FiShoppingCart />}
               variant="solid"
               colorScheme="purple"
-              size="sm"
               rounded="md"
               onClick={checkout}
             >
