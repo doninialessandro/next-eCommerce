@@ -1,11 +1,9 @@
-import { v4 as uuidv4 } from 'uuid'
-
 import { Flex, Heading, SimpleGrid, Stack } from '@chakra-ui/react'
 
 import Card from '../ui/Card'
 
 const Products = props => {
-  const { products } = props
+  const { products, addToCart } = props
   return (
     <Flex w="100%" px={8} mb={16}>
       <Stack
@@ -24,16 +22,22 @@ const Products = props => {
           Products
         </Heading>
         <SimpleGrid columns={[2, null, 3]} spacing="40px">
-          {products.map(p => (
-            <Card
-              key={uuidv4()}
-              isNew={p.isNew}
-              imageUrl={p.imageUrl}
-              imageAlt={p.imageAlt}
-              title={p.title}
-              price={p.price}
-            />
-          ))}
+          {products.map(p => {
+            const { id, isNew, image, title, price, description } = p
+            return (
+              <Card
+                key={id}
+                id={id}
+                isNew={isNew}
+                imageUrl={image}
+                imageAlt={title}
+                title={title}
+                description={description}
+                price={price}
+                addToCart={addToCart}
+              />
+            )
+          })}
         </SimpleGrid>
       </Stack>
     </Flex>
@@ -45,11 +49,12 @@ Products.defaultProps = {
     {
       isNew: true,
       imageUrl: 'https://bit.ly/2Z4KKcF',
-      imageAlt: 'Rear view of modern home with pool',
-      title: 'Modern home in city center in the heart of historic Los Angeles',
-      price: '$1,900.00',
+      imageAlt: 'Test',
+      title: 'Test',
+      price: '20',
     },
   ],
+  addToCart: () => console.log('Buy'),
 }
 
 export default Products

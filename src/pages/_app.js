@@ -1,8 +1,11 @@
 import { ChakraProvider, ColorModeProvider } from '@chakra-ui/react'
 
+import { CartContext, useCartState } from '../hooks/useCart'
 import theme from '../styles/theme'
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
+  const cart = useCartState()
+
   return (
     <ChakraProvider resetCSS theme={theme}>
       <ColorModeProvider
@@ -10,7 +13,9 @@ function MyApp({ Component, pageProps }) {
           useSystemColorMode: true,
         }}
       >
-        <Component {...pageProps} />
+        <CartContext.Provider value={cart}>
+          <Component {...pageProps} />
+        </CartContext.Provider>
       </ColorModeProvider>
     </ChakraProvider>
   )
