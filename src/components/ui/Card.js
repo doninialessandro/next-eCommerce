@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { Box, Image, Badge, Button } from '@chakra-ui/react'
+import { Box, Image, Badge, Button, useToast } from '@chakra-ui/react'
 import { PlusSquareIcon } from '@chakra-ui/icons'
 
 const Card = props => {
@@ -14,6 +14,8 @@ const Card = props => {
     price,
     addToCart,
   } = props
+  const toast = useToast()
+
   return (
     <Box
       maxW="sm"
@@ -55,7 +57,16 @@ const Card = props => {
         <Button
           colorScheme="purple"
           variant="solid"
-          onClick={() => addToCart({ id })}
+          onClick={() => {
+            toast({
+              title: '👌 Item added',
+              description: "🛍️ we've added the item to your cart for you",
+              status: 'success',
+              duration: 2000,
+              isClosable: true,
+            })
+            return addToCart({ id })
+          }}
           leftIcon={<PlusSquareIcon />}
         >
           Add
