@@ -2,8 +2,8 @@ This is an eCommerce application to accept payments & sell products powered by
 [Stripe](https://stripe.com/it) and bootstrapped with
 [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
 
-> :warning: ** This is a learning project**, some best practices are out of
-> scope and the payment function works in test mode.
+> :warning: **This is a learning project**, some best practices are out of scope
+> and the payment function works in test mode.
 
 ## Getting Started
 
@@ -17,12 +17,12 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 result.
 
-**IMPORTANT**: You need to set **NEXT_PUBLIC_STRIPE_API_KEY** env variable with
-your Stripe API token to test the checkout funtion.
+> :warning: **IMPORTANT**: You need to set **NEXT_PUBLIC_STRIPE_API_KEY** env
+> variable with your Stripe API token to test the checkout funtion.
 
 ## Learn More
 
-> :warning: To learn more about Next.js, take a look at the following resources:
+To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
   features and API.
