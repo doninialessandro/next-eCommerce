@@ -78,6 +78,7 @@ export const useCartState = () => {
   return {
     products,
     cart,
+    cartItems,
     subtotal,
     totalItems,
     addToCart,

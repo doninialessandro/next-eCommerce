@@ -46,7 +46,7 @@ const Card = props => {
           {title}
         </Box>
 
-        <Box>${price}</Box>
+        <Box>€{price}</Box>
 
         <Box mt="1" fontWeight="semibold" as="p" isTruncated noOfLines={2}>
           {description}

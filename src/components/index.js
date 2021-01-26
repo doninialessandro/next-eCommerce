@@ -8,5 +8,6 @@ export { default as Footer } from './sections/Footer'
 export { default as Card } from './ui/Card'
 export { default as Product } from './ui/Product'
 export { default as DarkModeSwitch } from './ui/DarkModeSwitch'
+export { default as CartTable } from './ui/CartContent'
 
 export { default as Container } from './Container'
