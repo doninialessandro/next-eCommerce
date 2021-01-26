@@ -19,7 +19,7 @@ const Produc = ({ id, title, description, image, price, addToCart }) => (
       borderColor="gray.200"
       rounded="1rem"
     >
-      <Image src={image} size="100%" rounded="1rem" />
+      <Image src={image} rounded="1rem" />
     </Box>
     <Stack
       spacing={4}

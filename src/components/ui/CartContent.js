@@ -75,7 +75,7 @@ const CartContent = props => {
         borderColor="gray.200"
         rounded="1rem"
       >
-        <Table variant="striped" shadow="2xl" size="100%" rounded="1rem">
+        <Table variant="striped" shadow="2xl">
           <TableCaption>Your cart</TableCaption>
           <Thead>
             <Tr>
