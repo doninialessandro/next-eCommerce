@@ -75,7 +75,7 @@ const CartContent = props => {
         borderColor="gray.200"
         rounded="1rem"
       >
-        <Table variant="striped" shadow="2xl">
+        <Table variant="striped" shadow="2xl" size="100%" rounded="1rem">
           <TableCaption>Your cart</TableCaption>
           <Thead>
             <Tr>
@@ -113,7 +113,7 @@ const CartContent = props => {
       >
         <Heading
           as="h1"
-          size="4xl"
+          size="3xl"
           pb={2}
           bgGradient="linear(to-l, #7928CA,#FF0080)"
           bgClip="text"
