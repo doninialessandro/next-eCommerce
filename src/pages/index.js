@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { Text, Stack, Button, Flex } from '@chakra-ui/react'
 import { FiShoppingCart } from 'react-icons/fi'
 import { GiTakeMyMoney } from 'react-icons/gi'
@@ -31,17 +33,18 @@ const Index = () => {
           >
             <GiTakeMyMoney style={{ marginRight: -10 }} />
             <Text>
-              <strong>Total:</strong> ${subtotal}
+              <strong>Total:</strong> €{subtotal}
             </Text>
-            <Button
-              leftIcon={<FiShoppingCart />}
-              variant="solid"
-              colorScheme="purple"
-              rounded="md"
-              onClick={checkout}
-            >
-              {totalItems} Check out
-            </Button>
+            <Link href="/cart">
+              <Button
+                leftIcon={<FiShoppingCart />}
+                variant="solid"
+                colorScheme="purple"
+                rounded="md"
+              >
+                {totalItems} Check out
+              </Button>
+            </Link>
           </Stack>
         </Flex>
         <br />
