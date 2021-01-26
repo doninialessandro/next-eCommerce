@@ -71,7 +71,7 @@ workflows:
             branches:
               ignore:
                 - main
-
+                - develop
       # - test:
       #     requires:
       #       - build
