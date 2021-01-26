@@ -64,25 +64,12 @@ jobs:
 
 workflows:
   version: 2
-  build:
+  build-release:
     jobs:
-      - build:
-          filters:
-            branches:
-              ignore:
-                - main
-                - develop
+      - build
       # - test:
       #     requires:
       #       - build
-
-  build-release:
-    jobs:
-      - build:
-          filters:
-            branches:
-              only:
-                - develop
       - release:
           requires:
             - build
