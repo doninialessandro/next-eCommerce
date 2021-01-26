@@ -13,17 +13,46 @@ import {
   Button,
   Heading,
   Stack,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
 } from '@chakra-ui/react'
+
 import { FiShoppingCart } from 'react-icons/fi'
 
 import products from '../../constants/products.json'
 
 const CartContent = props => {
-  const { cartItems, checkout } = props
+  const { cartItems, checkout, updateItem } = props
   const data = cartItems.map(item => {
+    const Quantity = () => {
+      const changeQuantity = v => {
+        updateItem({ id: item.id, quantity: v && parseInt(v, 10) })
+      }
+      return (
+        <NumberInput
+          defaultValue={item.quantity}
+          min={0}
+          max={999}
+          maxW={20}
+          onChange={changeQuantity}
+        >
+          <NumberInputField />
+          <NumberInputStepper>
+            <NumberIncrementStepper />
+            <NumberDecrementStepper />
+          </NumberInputStepper>
+        </NumberInput>
+      )
+    }
+
     const product = products.find(({ id }) => id === item.id)
+
     return {
       ...item,
+      quantity: <Quantity />,
       total: item.quantity * item.pricePerUnit,
       title: product.title,
     }

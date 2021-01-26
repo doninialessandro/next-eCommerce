@@ -1,14 +1,18 @@
-import { Container, Main, Header, CartTable } from '../components'
+import { Container, Main, Header, CartContent } from '../components'
 import { useCart } from '../hooks/useCart'
 
 const Cart = () => {
-  const { cartItems, checkout } = useCart()
+  const { cartItems, checkout, updateItem } = useCart()
 
   return (
     <Container>
       <Main>
         <Header />
-        <CartTable cartItems={cartItems} checkout={checkout} />
+        <CartContent
+          cartItems={cartItems}
+          checkout={checkout}
+          updateItem={updateItem}
+        />
       </Main>
     </Container>
   )
