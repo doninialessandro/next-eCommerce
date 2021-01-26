@@ -60,33 +60,16 @@ jobs:
             # Find the most recently generated cache used from any branch
             - v1-npm-deps-
 
-      - run: npx semantic-release --branches develop
+      - run: npm run semantic-release || true
 
 workflows:
   version: 2
-  build:
+  build-release:
     jobs:
-      - build:
-          filters:
-            branches:
-              ignore:
-                - main
-                - develop
+      - build
       # - test:
       #     requires:
       #       - build
-
-  build-release:
-    jobs:
-      - build:
-          filters:
-            branches:
-              only:
-                - develop
       - release:
           requires:
             - build
-          filters:
-            branches:
-              only:
-                - develop
