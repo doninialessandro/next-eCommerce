@@ -79,9 +79,11 @@ const CartContent = props => {
           <TableCaption>Your cart</TableCaption>
           <Thead>
             <Tr>
-              <Th>Product Name</Th>
-              <Th isNumeric>Quantity</Th>
-              <Th isNumeric>PPU (€)</Th>
+              <Th>Name</Th>
+              <Th>Qt</Th>
+              <Th display={{ base: 'none', md: 'table-cell' }} isNumeric>
+                PPU (€)
+              </Th>
               <Th isNumeric>Total (€)</Th>
             </Tr>
           </Thead>
@@ -90,7 +92,9 @@ const CartContent = props => {
               <Tr key={d.id}>
                 <Td>{d.title}</Td>
                 <Td isNumeric>{d.quantity}</Td>
-                <Td isNumeric>{d.pricePerUnit}</Td>
+                <Td display={{ base: 'none', md: 'table-cell' }} isNumeric>
+                  {d.pricePerUnit}
+                </Td>
                 <Td isNumeric>{d.total}</Td>
               </Tr>
             ))}
@@ -99,7 +103,7 @@ const CartContent = props => {
             <Tr>
               <Th />
               <Th />
-              <Th />
+              <Th display={{ base: 'none', md: 'table-cell' }} />
               <Th isNumeric>{data.reduce((a, v) => a + v.total, 0)}</Th>
             </Tr>
           </Tfoot>
