@@ -42,5 +42,5 @@ for more details.
 
 
 ### Credits
-🥚 Inspired by [Create an eCommerce Store with Next.js and Stripe Checkout](https://egghead.io/projects/create-an-ecommerce-store-with-next-js-and-stripe-checkout) on (egghead)[https://egghead.io/]
+🥚 Inspired by [Create an eCommerce Store with Next.js and Stripe Checkout](https://egghead.io/projects/create-an-ecommerce-store-with-next-js-and-stripe-checkout) on [egghead](https://egghead.io/)
 
